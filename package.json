@@ -1,0 +1,44 @@
+{
+  "name": "hugomeireles",
+  "version": "2.0.0",
+  "description": "The personal website to show case works",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HMhugomeireles/hugomeireles.com.git"
+  },
+  "keywords": [
+    "react",
+    "personal",
+    "website",
+    "portfolio"
+  ],
+  "author": "Hugo Meireles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HMhugomeireles/hugomeireles.com/issues"
+  },
+  "homepage": "https://github.com/HMhugomeireles/hugomeireles.com#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "prop-types": "^15.7.2",
+    "react-hot-loader": "^4.3.11",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
