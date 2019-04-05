@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import AppClient from './client/App'
 
 ReactDOM.render(
-  <div>Hugo Meireles work work wwwwwwwwwwwwwwwwwwwwwwork</div>,
+  <AppClient />,
   document.getElementById('app')
 );
 
