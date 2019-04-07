@@ -1,10 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Routes from './routes'
+import * as Context from './containers/context'
 
-export default class App extends Component {
-  render(props) {
-    return (
-      <Routes {...props}/>
-    )
-  }
+const App = () => {
+  return (
+    <Context.ThemeProvider>
+      <Routes />
+    </Context.ThemeProvider>
+  )
 }
+
+
+export default App;
