@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ThemeProvider } from 'styled-components'
 import * as Context from './../../context'
 import { Logo, Hamburger, SocialLinks } from './../../../components'
+import foto from './hugomeireles.jpg'
 import { 
   Scene, SectionLogo,
   SectionHamburger, SectionFoto, SectionIntro, SectionSocialLinks,
@@ -23,7 +24,7 @@ class Home extends Component {
                 <Hamburger />
               </SectionHamburger>
               <SectionFoto>
-                foto              
+                <img src={foto} alt="foto"/>
               </SectionFoto>
               <SectionIntro>
                 <h1>Hugo Meireles</h1>
