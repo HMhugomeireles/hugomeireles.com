@@ -1,16 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
+import { Dark } from './themes'
 
 export const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-  }
-
-  body {
-    font-family: sans-serif;
-    background-color: #2a2a72;
-    background-image: linear-gradient(125deg, #2a2a72 0%, #009ffd 74%);
   }
 `
