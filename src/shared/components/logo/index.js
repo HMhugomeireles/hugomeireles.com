@@ -2,13 +2,21 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 const Logo = () => (
-    <Fragment>
+    <LogoContainer>
       <span>H<span>M</span></span>
-    </Fragment>
+    </LogoContainer>
 )
 
 export default Logo;
 
-const StyledLogo = styled(Logo)`
+const LogoContainer = styled.span`
+  span {
+    font-size: 2rem;
+    padding: 10px;
 
+    span {
+      background: ${props => props.theme.colors.colorAction};
+      color: #fff;
+    }
+  }
 `;

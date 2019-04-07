@@ -3,9 +3,11 @@ import { ThemeProvider } from 'styled-components'
 import * as Context from './../../context'
 import { Logo, Hamburger, SocialLinks } from './../../../components'
 import foto from './hugomeireles.jpg'
+import { Link } from 'react-router-dom'
 import { 
   Scene, SectionLogo,
   SectionHamburger, SectionFoto, SectionIntro, SectionSocialLinks,
+  SectionTheme,
   Title, SubTilte,
   Into
 } from './styled'
@@ -14,8 +16,8 @@ class Home extends Component {
   render() {
     return (
       <Context.ThemeContext.Consumer>
-        { context => (
-          <ThemeProvider theme={context.state.theme}>
+        { ({ state, toggleTheme }) => (
+          <ThemeProvider theme={state.theme}>
             <Scene>
               <SectionLogo>
                 <Logo />
@@ -24,7 +26,7 @@ class Home extends Component {
                 <Hamburger />
               </SectionHamburger>
               <SectionFoto>
-                <img src={foto} alt="foto"/>
+                <img src={foto} alt="foto" style={{width: '30vw'}}/>
               </SectionFoto>
               <SectionIntro>
                 <h1>Hugo Meireles</h1>
@@ -32,11 +34,16 @@ class Home extends Component {
                 <p>"Write code for humans and not for machines"</p>
                 <p>I have serious passion build things for humans.</p>
                 <p>I'm self thught and ...</p>
-                <button>See More +</button>
+                <Link to="/about">See More +</Link>
               </SectionIntro>
               <SectionSocialLinks>
                 <SocialLinks />
               </SectionSocialLinks>
+              <SectionTheme>
+                <button onClick={toggleTheme}>
+                  { state.themeName }
+                </button>
+              </SectionTheme>
             </Scene>
           </ThemeProvider>  
         )}  

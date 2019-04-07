@@ -5,11 +5,13 @@ export const ThemeContext = React.createContext();
 
 export class ThemeProvider extends Component {
   state = {
+    themeName: 'Light',
     theme: Dark,
   };
 
   toggleTheme = () => {
     this.setState({
+      themeName: this.state.themeName === 'Dark' ? 'Light' : 'Dark',
       theme: this.state.theme === Dark ? Light : Dark
     })
   }
