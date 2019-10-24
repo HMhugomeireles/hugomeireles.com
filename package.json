@@ -1,47 +1,43 @@
 {
-  "name": "hugomeireles",
-  "version": "2.0.0",
-  "description": "The personal website to show case works",
-  "main": "index.js",
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.16.1",
+    "gatsby-image": "^2.2.29",
+    "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-offline": "^3.0.16",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-sharp": "^2.2.31",
+    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-transformer-sharp": "^2.2.23",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HMhugomeireles/hugomeireles.com.git"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
-  "keywords": [
-    "react",
-    "personal",
-    "website",
-    "portfolio"
-  ],
-  "author": "Hugo Meireles",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HMhugomeireles/hugomeireles.com/issues"
-  },
-  "homepage": "https://github.com/HMhugomeireles/hugomeireles.com#readme",
-  "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-icons": "^3.5.0",
-    "react-router-dom": "^5.0.0",
-    "styled-components": "^4.2.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "file-loader": "^3.0.1",
-    "prop-types": "^15.7.2",
-    "react-hot-loader": "^4.3.11",
-    "webpack": "^4.23.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
