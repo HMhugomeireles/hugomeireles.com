@@ -14,3 +14,5 @@ const Themes = {
     menuShadowValues: '0px 4px 4px rgba(255, 255, 255, 0.24)',
   },
 }
+
+module.exports = Themes

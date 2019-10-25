@@ -18,3 +18,5 @@ const MenuLinks = {
     },
   ]
 }
+
+module.exports = MenuLinks 
