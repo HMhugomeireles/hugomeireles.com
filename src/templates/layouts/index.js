@@ -1,23 +1,35 @@
 import React, { Component } from 'react'
 
-import ThemeContext from './../context/ThemeContext'
+import NavBar from './../../organisms/NavBar'
 
-import NavBar from './../components/NavBar'
-
-import Config from './../../data/MenuLinks'
-
+import { menuLinks, socialLinks } from './../../../data/Links'
+import * as AllTheme from './../../../data/themes'
+//import ThemeContext from './../../context/ThemeContext'
 export default class Layout extends Component {
-  
+  state = {
+    theme:  AllTheme.dark,
+  }
+
+  toggleTheme = () => {
+    this.setState({
+      theme: this.state.theme.name === 'dark' ? AllTheme.light : AllTheme.dark,
+    })
+  }
 
   render() {
+    const { children } = this.props
+    //console.log(this.props);
 
     return (
-      <>
+      <div>
         <NavBar 
-          menuLinks={Config.menuLinks}
+          menuLinks={menuLinks}
+          socialLinks={socialLinks}
+          theme={this.state.theme}
+          toggleTheme={this.toggleTheme}
         />
         <main>{children}</main>
-      </>
+      </div>
     )
 
   }
