@@ -1,7 +1,3 @@
-import React from 'react'
+import { createContext } from 'react'
 
-import { dark } from './../../data/themes'
-
-export default React.createContext({
-  theme: dark
-})
+export default createContext(null)

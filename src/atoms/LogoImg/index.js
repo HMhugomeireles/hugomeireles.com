@@ -1,4 +1,4 @@
-import React from './node_modules/react'
+import React from 'react'
 
 import LogoDark from './../../images/logo-dark.svg'
 import LogoLight from './../../images/logo-light.svg'
