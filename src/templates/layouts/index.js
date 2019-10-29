@@ -1,26 +1,24 @@
-import React, { Component } from 'react'
+import React, { useState, useMemo } from 'react'
+import ThemeContext from './../../context/ThemeContext'
 
-import ThemeContext from './../context/ThemeContext'
+import NavBar from './../../organisms/NavBar'
 
-import NavBar from './../components/NavBar'
+import { menuLinks, socialLinks } from './../../../data/Links'
+import * as AllTheme from './../../../data/themes'
 
-import Config from './../../data/MenuLinks'
 
-export default class Layout extends Component {
-  
+export default () => {
+  const [theme, setTheme] = useState({ theme: AllTheme.light })
+  const provideTheme = useMemo(() => ({theme, setTheme}), [theme, setTheme])
 
-  render() {
-
-    return (
-      <>
-        <NavBar 
-          menuLinks={Config.menuLinks}
-        />
-        <main>{children}</main>
-      </>
-    )
-
-  }
-
+  return (
+    <ThemeContext.Provider value={{ provideTheme, AllTheme }}>
+      <NavBar 
+        menuLinks={menuLinks}
+        socialLinks={socialLinks}
+      />
+      <main></main>
+    </ThemeContext.Provider>
+  )
 }
 

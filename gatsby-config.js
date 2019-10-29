@@ -7,3 +7,13 @@
 module.exports = {
   /* Your site config here */
 }
+
+module.export = {
+  siteMetadata: {
+    title: `Hugo Meireles`
+  },
+  plugins: [
+    'gatsby-plugin-sass'
+  ]
+
+}
