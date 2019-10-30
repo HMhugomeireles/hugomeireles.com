@@ -1,1 +1,1 @@
-//import './src/style/global.sass'
+import './src/style/global.css'
