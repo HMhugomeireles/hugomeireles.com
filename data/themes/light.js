@@ -4,6 +4,6 @@ export default {
   backgroundMenu: '#fff',
   textColorPrimary: '#2D3237',
   textColorSecondary: '#fff',
-  menuShadowValues: 'box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)',
+  menuShadowValues: '0px 4px 4px rgba(0, 0, 0, 0.25)',
   menuButtonColor: '#000',
 }

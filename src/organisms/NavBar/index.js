@@ -12,18 +12,16 @@ import { NavBar, Icons, LogoSection, Menu, ToggleTheme, SocialLinks } from './St
 import ThemeContext from '../../context/ThemeContext'
 
 export default ({ menuLinks, socialLinks }) => {
-  const { provideTheme: { theme, setTheme}, AllTheme } = useContext(ThemeContext)
-  console.log(theme);
+  const { theme, setTheme, Themes } = useContext(ThemeContext)
 
   const toggleTheme = () => {
-    console.log(theme);
     setTheme({
-      theme: theme.name === 'dark' ? AllTheme.light : AllTheme.dark
+      darkMode: !theme.darkMode
     })
   }
 
   return (
-    <NavBar style={{background: theme.backgroundMenu}}>
+    <NavBar darkMode={theme.darkMode} theme={Themes}>
       <Icons>
         <Icon 
           styleType={{width: '24px', height: '24px'}} 
@@ -36,23 +34,27 @@ export default ({ menuLinks, socialLinks }) => {
       </Icons>
       <LogoSection>
         <LogoHM 
-          themeName={"dark"}
+          darkMode={theme.darkMode}
         />
       </LogoSection>
-      <Menu>
+      <Menu
+        darkMode={theme.darkMode}
+        theme={Themes}
+      >
         {menuLinks.map(link => <p key={link.name}>{link.name}</p>)}
       </Menu>
       <ToggleTheme>
         <button onClick={toggleTheme}>change theme</button>
       </ToggleTheme>
       <SocialLinks>
-        {socialLinks.map(social =>
+        {
+          socialLinks.map(social =>
             <SocialIcon
               key={social.name}
               url={social.url}
               iconName={social.name}
               styleType={{width: '24px', height: '24px'}}
-              theme={theme}
+              darkMode={theme.darkMode}
             />
           )
         }

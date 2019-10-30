@@ -1,18 +1,17 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState } from 'react'
 import ThemeContext from './../../context/ThemeContext'
 
 import NavBar from './../../organisms/NavBar'
 
 import { menuLinks, socialLinks } from './../../../data/Links'
-import * as AllTheme from './../../../data/themes'
+import * as Themes from './../../../data/themes'
 
 
 export default () => {
-  const [theme, setTheme] = useState({ theme: AllTheme.light })
-  const provideTheme = useMemo(() => ({theme, setTheme}), [theme, setTheme])
+  const [theme, setTheme] = useState({ darkMode: false })
 
   return (
-    <ThemeContext.Provider value={{ provideTheme, AllTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme, Themes }}>
       <NavBar 
         menuLinks={menuLinks}
         socialLinks={socialLinks}
