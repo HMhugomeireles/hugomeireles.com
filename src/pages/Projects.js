@@ -1,9 +1,9 @@
 import React from "react"
 
-import Layout from './../templates/layouts/'
+import Layout from '../templates/layouts'
 
 export default () => (
   <Layout>
-    projects
+    <h1>projects</h1>
   </Layout>
 )
