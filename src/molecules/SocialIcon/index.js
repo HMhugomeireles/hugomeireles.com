@@ -7,12 +7,12 @@ import GithubDark from './../../images/Github-darkTheme.svg'
 import LinkedIn from './../../images/LinkedIN.svg'
 import Twitter from './../../images/Twitter.svg'
 
-export default ({url, iconName, styleType, theme}) => {
+export default ({url, iconName, styleType, darkMode}) => {
   let icon = ''
   
   switch(iconName) {
     case 'GitHub':
-      theme.name === 'dark' ? icon = GithubDark : icon = GithubLight;
+      darkMode ? icon = GithubDark : icon = GithubLight;
       break;
     case 'LinkedIn':
       icon = LinkedIn;

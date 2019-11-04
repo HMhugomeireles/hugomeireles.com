@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default ({icon , styleType}) => {
-  return <img src={icon} style={styleType}  alt="icons webpage hugo meireles" />
+export default ({icon , styleType, onClick }) => {
+  return <img src={icon} style={styleType} onClick={onClick} alt="icons webpage hugo meireles" />
 }

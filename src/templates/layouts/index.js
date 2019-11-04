@@ -1,23 +1,40 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState } from 'react'
 import ThemeContext from './../../context/ThemeContext'
-
+import MenuContext from './../../context/MenuContext'
 import NavBar from './../../organisms/NavBar'
-
 import { menuLinks, socialLinks } from './../../../data/Links'
-import * as AllTheme from './../../../data/themes'
+import * as Themes from './../../../data/themes'
+import { MainContent } from './Styled'
+import MenuIcon from './../../atoms/MenuIcon/'
 
+export default ({children}) => {
+  const [theme, setTheme] = useState({ darkMode: false })
+  const [menuState, setMenuState] = useState({ isMenuOpen: false })
+  
 
-export default () => {
-  const [theme, setTheme] = useState({ theme: AllTheme.light })
-  const provideTheme = useMemo(() => ({theme, setTheme}), [theme, setTheme])
+  const toggleMenu = () => {
+    if (window.innerWidth < 1000) {
+      setMenuState({ isMenuOpen: !menuState.isMenuOpen })
+    } else {
+      setMenuState({ isMenuOpen: true })
+    }
+    console.log(menuState);
+  }
 
   return (
-    <ThemeContext.Provider value={{ provideTheme, AllTheme }}>
-      <NavBar 
-        menuLinks={menuLinks}
-        socialLinks={socialLinks}
-      />
-      <main></main>
+    <ThemeContext.Provider value={{ theme, setTheme, Themes }}>
+      <MenuContext.Provider value={{ menuToggle: menuState }}>
+        <NavBar 
+          menuLinks={menuLinks}
+          socialLinks={socialLinks}
+          isOpen={menuState}
+          toggleMenu={toggleMenu}
+        />
+        <MainContent darkMode={theme.darkMode} theme={Themes}>
+          <MenuIcon toggleMenu={toggleMenu} />
+          {children}
+        </MainContent>
+      </MenuContext.Provider>
     </ThemeContext.Provider>
   )
 }
