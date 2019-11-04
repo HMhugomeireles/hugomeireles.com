@@ -2,7 +2,7 @@ const MenuLinks = {
   menuLinks: [
     {
       name: 'About',
-      link: '/about'
+      link: '/'
     },
     {
       name: 'Projects',

@@ -8,10 +8,24 @@ export const NavBar = styled.nav`
   box-shadow: ${({darkMode, theme: { dark, light }}) => darkMode ? dark.menuShadowValues : light.menuShadowValues};
   background: ${({darkMode, theme: { dark, light }}) => darkMode ? dark.backgroundMenu : light.backgroundMenu};
   transition: ease-in-out 400ms;
+
+  position: absolute;
+  left: ${({ menuToggle }) => menuToggle ? '0' : '-95vw'};
+  top: 0;
+  z-index: 1;
+
+  @media (min-width: 1000px) {
+    width: 390px;
+    position: relative;
+    left: 0vw;
+  }
 `
 export const Icons = styled.section`
   height: 10%;
   
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 `
 export const LogoSection = styled.section`
   height: 40%;
@@ -38,5 +52,5 @@ export const SocialLinks = styled.section`
   height: 10%;  
   display: flex;
   justify-content: space-around;
-  align-items: bottom;
+  align-items: center;
 `
