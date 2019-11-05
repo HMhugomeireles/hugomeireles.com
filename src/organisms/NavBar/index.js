@@ -21,7 +21,6 @@ export default ({ menuLinks, socialLinks, toggleMenu }) => {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
-    console.log(windowState);
     return () => window.addEventListener('resize', handleResize);
   }, [windowState])
 
