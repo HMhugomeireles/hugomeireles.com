@@ -12,7 +12,6 @@ export default ({children}) => {
   const [theme, setTheme] = useLocalStorage('theme', { darkMode: false })
   const [menuState, setMenuState] = useState({ isMenuOpen: false })
   
-
   const toggleMenu = () => {
     if (window.innerWidth < 1000) {
       setMenuState({ isMenuOpen: !menuState.isMenuOpen })

@@ -10,7 +10,7 @@ export const NavBar = styled.nav`
   transition: ease-in-out 400ms;
 
   position: absolute;
-  left: ${({ menuToggle }) => menuToggle ? '0' : '-95vw'};
+  left: ${({ menuToggle }) => menuToggle ? '0' : '-96vw'};
   top: 0;
   z-index: 1;
 
