@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useLocalStorage } from 'react-use'
 import ThemeContext from './../../context/ThemeContext'
 import MenuContext from './../../context/MenuContext'
 import NavBar from './../../organisms/NavBar'
@@ -8,10 +9,9 @@ import { MainContent } from './Styled'
 import MenuIcon from './../../atoms/MenuIcon/'
 
 export default ({children}) => {
-  const [theme, setTheme] = useState({ darkMode: false })
+  const [theme, setTheme] = useLocalStorage('theme', { darkMode: false })
   const [menuState, setMenuState] = useState({ isMenuOpen: false })
   
-
   const toggleMenu = () => {
     if (window.innerWidth < 1000) {
       setMenuState({ isMenuOpen: !menuState.isMenuOpen })

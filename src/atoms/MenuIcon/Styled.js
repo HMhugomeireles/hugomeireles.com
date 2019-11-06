@@ -6,5 +6,5 @@ export const MenuIcon = Styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 20px;
 `
