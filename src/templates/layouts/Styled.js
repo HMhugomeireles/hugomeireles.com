@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const MainContent = styled.main`
+  overflow-x: hidden;
   width: 100vw;
   height: 100%;
   background: ${({darkMode, theme: { dark, light }}) => darkMode ? dark.backgroundPage : light.backgroundPage};
@@ -12,7 +13,10 @@ export const MainContent = styled.main`
   z-index: 0;
 
   @media (min-width: 1000px) {
-    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: calc(100% - 390px);
     z-index: 0;
     left: 390px;

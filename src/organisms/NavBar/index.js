@@ -81,7 +81,6 @@ export default ({ menuLinks, socialLinks, toggleMenu }) => {
               url={social.url}
               iconName={social.name}
               styleType={{width: '24px', height: '24px'}}
-              darkMode={theme.darkMode}
             />
           )
         }
