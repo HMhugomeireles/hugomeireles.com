@@ -8,7 +8,6 @@ export default function ProjectList() {
 
   return (
     <ProjectListSection>
-      <h3>Projects</h3>
       <ProjectItem 
         title={'Gatsby hello-world starter 1'}
         date={'August 24, 2019'}

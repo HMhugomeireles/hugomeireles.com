@@ -13,8 +13,6 @@ export const MainContent = styled.main`
   z-index: 0;
 
   @media (min-width: 1000px) {
-    display: flex;
-    justify-content: center;
     overflow-y: auto;
     overflow-x: hidden;
     width: calc(100% - 390px);

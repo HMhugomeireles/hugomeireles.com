@@ -1,10 +1,12 @@
 import Styled from 'styled-components'
 
 export const ProjectContainer = Styled.article`
+  margin: 0 auto;
   margin-bottom: 5px; 
   padding: 10px 15px;
   background: #292A37;
   max-height: 125px;
+  max-width: 600px;
   position: relative;
   overflow: hidden;
 

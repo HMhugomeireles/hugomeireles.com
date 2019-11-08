@@ -2,6 +2,8 @@ import React from "react"
 import { WrapperSection } from './Styled'
 import PageMap from './../molecules/PageMap/'
 import Layout from '../templates/layouts'
+import PostList from './../organisms/PostList/'
+import HighlightPost from './../organisms/highlightPost/'
 
 export default () => (
   <Layout>
@@ -18,6 +20,8 @@ export default () => (
           }
         ]}}
       />
+      <HighlightPost />
+      <PostList />
     </WrapperSection>
   </Layout>
 )
