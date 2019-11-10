@@ -28,7 +28,7 @@ export const PostContainer = Styled.article`
 
   hr {
     width: 50%;
-    margin: 50px auto; 
+    margin: 15px auto; 
     border: 1px solid #292A37;
   }
 `

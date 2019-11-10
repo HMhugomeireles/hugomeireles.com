@@ -13,15 +13,27 @@ export const HighLightContainer = Styled.article`
   }
 
 
+  @media (min-width: 500px) {
+    max-width: 800px; 
+    
+    
+  }
+
   @media (min-width: 1000px) {
-    max-width: 840px;
+    width: 100%;
+    
+    
   }
 `
 
 export const HeaderPostImg = Styled.header`
-  background: url(${props => props.src});
-  background-size: 100% 100%;
-  background-position: center center; 
-  background: #333;
-  width: 49%;
+  display: none;
+
+  @media (min-width: 700px) {
+    display: block;
+    background: url(${props => props.src});
+    background-size: 150% 150%;
+    background-position: center center; 
+    width: 49%;
+  }
 `

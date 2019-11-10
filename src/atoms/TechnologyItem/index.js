@@ -7,6 +7,8 @@ const Tag = Styled.h4`
   color: ${props => props.color};
   font-family: ${({font}) => font};
   font-size: ${({size}) => size};
+  display: flex;
+  align-items: center; 
 `
 
 export default function TechnologyItem(props) {
