@@ -8,12 +8,29 @@ module.exports = {
   /* Your site config here */
 }
 
-module.export = {
+module.exports = {
+
   siteMetadata: {
     title: `Hugo Meireles`
   },
+
   plugins: [
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'aboutme',
+        path: `${__dirname}/content/me/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+    'gatsby-transformer-remark',
   ]
 
 }
