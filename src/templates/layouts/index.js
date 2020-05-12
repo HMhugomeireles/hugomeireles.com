@@ -1,41 +1,34 @@
-import React, { useState } from 'react'
-import { useLocalStorage } from 'react-use'
-import ThemeContext from './../../context/ThemeContext'
-import MenuContext from './../../context/MenuContext'
-import NavBar from './../../organisms/NavBar'
-import { menuLinks, socialLinks } from './../../../data/Links'
-import * as Themes from './../../../data/themes'
-import { MainContent } from './Styled'
-import MenuIcon from './../../atoms/MenuIcon/'
+import React from "react"
+import { useLocalStorage } from "react-use"
+import * as Themes from "./../../../data/themes"
+import { MainContent, WrapperContent } from "./Styled"
+import { ThemeProvider } from "styled-components"
+import Navigation from "./../../Navigation/index"
 
-export default ({children}) => {
-  const [theme, setTheme] = useLocalStorage('theme', { darkMode: false })
-  const [menuState, setMenuState] = useState({ isMenuOpen: false })
-  
-  const toggleMenu = () => {
-    if (window.innerWidth < 1000) {
-      setMenuState({ isMenuOpen: !menuState.isMenuOpen })
-    } else {
-      setMenuState({ isMenuOpen: true })
+export const ThemeContext = React.createContext(null)
+
+export default function Layout({ children }) {
+  const [theme, setTheme] = useLocalStorage("theme", { darkMode: true })
+
+  function toggleTheme() {
+    setTheme({ darkMode: !theme.darkMode })
+  }
+
+  function isDarkMode() {
+    if (theme.darkMode) {
+      return Themes.dark
     }
-    console.log(menuState);
+    return Themes.light
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, Themes }}>
-      <MenuContext.Provider value={{ menuToggle: menuState }}>
-        <NavBar 
-          menuLinks={menuLinks}
-          socialLinks={socialLinks}
-          isOpen={menuState}
-          toggleMenu={toggleMenu}
-        />
-        <MainContent darkMode={theme.darkMode} theme={Themes}>
-          <MenuIcon toggleMenu={toggleMenu} />
-          {children}
+    <ThemeContext.Provider value={{ toggleTheme, theme }}>
+      <ThemeProvider theme={isDarkMode()}>
+        <MainContent>
+          <Navigation />
+          <WrapperContent>{children}</WrapperContent>
         </MainContent>
-      </MenuContext.Provider>
+      </ThemeProvider>
     </ThemeContext.Provider>
   )
 }
-

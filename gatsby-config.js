@@ -10,10 +10,7 @@ module.exports = {
 
 module.export = {
   siteMetadata: {
-    title: `Hugo Meireles`
+    title: `Hugo Meireles`,
   },
-  plugins: [
-    'gatsby-plugin-sass'
-  ]
-
+  plugins: ["gatsby-plugin-sass", `gatsby-plugin-mdx`],
 }
