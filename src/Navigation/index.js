@@ -1,7 +1,6 @@
-import React, { useContext } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { ThemeContext } from "../templates/layouts"
 import Emoji from "../Ui/Emoji"
 
 const Nav = styled.nav`
@@ -43,10 +42,7 @@ const Logo = styled.div`
   }
 `
 
-function Navigation() {
-  const { toggleTheme, theme } = useContext(ThemeContext)
-
-  console.log(toggleTheme)
+function Navigation({ onChangeTheme, theme }) {
   return (
     <Nav>
       <Wrapper>
@@ -60,7 +56,7 @@ function Navigation() {
           <StyledLink to="/blog">Blog</StyledLink>
           <Emoji
             style={{ cursor: "pointer" }}
-            onClick={toggleTheme}
+            onClick={onChangeTheme}
             role="img"
             aria-label="Icon to change theme."
             emoji={theme.darkMode ? "☀️" : "🌙"}

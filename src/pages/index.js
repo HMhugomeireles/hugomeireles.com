@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Layout from "../templates/layouts"
 import Emoji from "../Ui/Emoji"
 import JSIcon from "../icons/icon-js.svg"
 
@@ -40,28 +39,25 @@ const TextHighlight = styled.span`
 `
 
 export default () => (
-  <Layout>
-    <Container>
-      <main>
-        <Greetings>
-          Hi,{" "}
-          <Emoji ariaLabel="Hand say, Hello!" fontSize={"3rem"} emoji="👋" />-
-          I’m <PersonName>Hugo Meireles</PersonName>.
-        </Greetings>
-        <IntroText>
-          <Emoji ariaLabel="Computer" fontSize={"3rem"} emoji="💻" />
-          <TextHighlight>FullStack Developer</TextHighlight> based on Porto,
-          Portugal
-          <Emoji ariaLabel="City" fontSize={"3rem"} emoji="🏙️" />
-          , I currently work at NovaBase(Celfocus). <br />
-          Human being who have a many passion. Father, Dreamer, Idealistic,{" "}
-          <TextHighlight>
-            <img src={JSIcon} />
-            Javascript
-          </TextHighlight>{" "}
-          lover and interfaces creator.
-        </IntroText>
-      </main>
-    </Container>
-  </Layout>
+  <Container>
+    <main>
+      <Greetings>
+        Hi, <Emoji ariaLabel="Hand say, Hello!" fontSize={"3rem"} emoji="👋" />-
+        I’m <PersonName>Hugo Meireles</PersonName>.
+      </Greetings>
+      <IntroText>
+        <Emoji ariaLabel="Computer" fontSize={"3rem"} emoji="💻" />
+        <TextHighlight>FullStack Developer</TextHighlight> based on Porto,
+        Portugal
+        <Emoji ariaLabel="City" fontSize={"3rem"} emoji="🏙️" />
+        , I currently work at NovaBase(Celfocus). <br />
+        Human being who have a many passion. Father, Dreamer, Idealistic,{" "}
+        <TextHighlight>
+          <img src={JSIcon} alt="Icon javascript" />
+          Javascript
+        </TextHighlight>{" "}
+        lover and interfaces creator.
+      </IntroText>
+    </main>
+  </Container>
 )

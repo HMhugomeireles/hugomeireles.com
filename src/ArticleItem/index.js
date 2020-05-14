@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 
-const ff = styled.div`
-  font-family: "Roboto Mono", monospace;
+const Container = styled.div`
+  color: #000;
 `
 
 function ArticleItem() {
-  return <div>a</div>
+  return <Container>a</Container>
 }
 
 export default ArticleItem
