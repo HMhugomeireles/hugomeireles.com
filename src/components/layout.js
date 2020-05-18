@@ -1,6 +1,5 @@
 import React from "react"
 //import Header from "./header"
-//import "./layout.css"
 import Navigation from "./Navigation"
 import { MainContent, WrapperContent } from "../styles/styles"
 
