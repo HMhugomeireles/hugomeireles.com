@@ -5,9 +5,7 @@ import { Theme } from "./../../context/Theme" */
 
 function Navigation() {
   //const aa = React.useContext(Theme)
-  const theme = {
-    darkMode: true,
-  }
+
   return (
     <Nav>
       <Wrapper>

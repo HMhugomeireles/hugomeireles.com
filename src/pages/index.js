@@ -43,25 +43,28 @@ const TextHighlight = styled.span`
 
 const IndexPage = () => (
   <Layout>
-    <main>
-      <Greetings>
-        Hi, <Emoji ariaLabel="Hand say, Hello!" fontSize={"3rem"} emoji="👋" />-
-        I’m <PersonName>Hugo Meireles</PersonName>.
-      </Greetings>
-      <IntroText>
-        <Emoji ariaLabel="Computer" fontSize={"3rem"} emoji="💻" />
-        <TextHighlight>FullStack Developer</TextHighlight> based on Porto,
-        Portugal
-        <Emoji ariaLabel="City" fontSize={"3rem"} emoji="🏙️" />
-        , I currently work at NovaBase(Celfocus). <br />
-        Human being who have a many passion. Father, Dreamer, Idealistic,{" "}
-        <TextHighlight>
-          <img src={JSIcon} alt="Icon javascript" />
-          Javascript
-        </TextHighlight>{" "}
-        lover and interfaces creator.
-      </IntroText>
-    </main>
+    <Container>
+      <main>
+        <Greetings>
+          Hi,{" "}
+          <Emoji ariaLabel="Hand say, Hello!" fontSize={"3rem"} emoji="👋" />-
+          I’m <PersonName>Hugo Meireles</PersonName>.
+        </Greetings>
+        <IntroText>
+          <Emoji ariaLabel="Computer" fontSize={"3rem"} emoji="💻" />
+          <TextHighlight>FullStack Developer</TextHighlight> based on Porto,
+          Portugal
+          <Emoji ariaLabel="City" fontSize={"3rem"} emoji="🏙️" />
+          , I currently work at NovaBase(Celfocus). <br />
+          Human being who have a many passion. Father, Dreamer, Idealistic,{" "}
+          <TextHighlight>
+            <img src={JSIcon} alt="Icon javascript" />
+            Javascript
+          </TextHighlight>{" "}
+          lover and interfaces creator.
+        </IntroText>
+      </main>
+    </Container>
   </Layout>
 )
 
