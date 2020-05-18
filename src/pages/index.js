@@ -1,6 +1,9 @@
 import React from "react"
+
+import Layout from "../components/layout"
+
 import styled from "styled-components"
-import Emoji from "../Ui/Emoji"
+import Emoji from "../components/Ui/Emoji"
 import JSIcon from "../icons/icon-js.svg"
 
 const Container = styled.section`
@@ -38,8 +41,8 @@ const TextHighlight = styled.span`
   }
 `
 
-export default () => (
-  <Container>
+const IndexPage = () => (
+  <Layout>
     <main>
       <Greetings>
         Hi, <Emoji ariaLabel="Hand say, Hello!" fontSize={"3rem"} emoji="👋" />-
@@ -59,5 +62,7 @@ export default () => (
         lover and interfaces creator.
       </IntroText>
     </main>
-  </Container>
+  </Layout>
 )
+
+export default IndexPage
