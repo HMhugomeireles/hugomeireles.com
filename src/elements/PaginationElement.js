@@ -15,7 +15,7 @@ export const PaginationWrapper = styled.div`
         ? props.theme.colors.textColorPrimary
         : props.theme.colors.textColorSecondary};
     pointer-events: ${props => (props.isFirst ? "none" : "auto")};
-    cursor: ${props => (props.isFirst ? "default" : pointer)};
+    cursor: ${props => (props.isFirst ? "default" : "pointer")};
   }
   a:nth-child(2) {
     color: ${props =>
@@ -23,7 +23,7 @@ export const PaginationWrapper = styled.div`
         ? props.theme.colors.textColorPrimary
         : props.theme.colors.textColorSecondary};
     pointer-events: ${props => (props.isLast ? "none" : "auto")};
-    cursor: ${props => (props.isLast ? "default" : pointer)};
+    cursor: ${props => (props.isLast ? "default" : "pointer")};
   }
 `
 
