@@ -7,7 +7,6 @@ import {
   FeatureImage,
   Pagination,
 } from "../components"
-import { Header1, Paragraph } from "../elements"
 
 export default function allPosts({ pageContext, data }) {
   const { currentPage, numPage } = pageContext
