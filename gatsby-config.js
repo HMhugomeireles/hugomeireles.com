@@ -49,6 +49,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
+          `open sans`,
           `roboto mono`,
           `muli\:300,400,400i,700,700i`, // you can also specify font weights and styles
         ],
@@ -58,4 +59,3 @@ module.exports = {
     `gatsby-plugin-styled-components`,
   ],
 }
-
