@@ -49,17 +49,6 @@ export function Home() {
         }}
         transition={{ delay: 0.3 }}
       />
-      {/* <FrameWithBorder
-        animate={{
-          opacity: 1,
-          x: 0,
-        }}
-        initial={{
-          opacity: 0,
-          x: -300,
-        }}
-        transition={{ delay: 0.4 }}
-      /> */}
       <SocialBox
         animate={{
           opacity: 1,

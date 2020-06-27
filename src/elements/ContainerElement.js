@@ -10,10 +10,13 @@ export const ContainerWrapper = styled.div`
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
     grid-template-columns: 1rem repeat(6, 1fr) 1rem;
-    grid-gap: 0 1rem;
+    gap: 0 1rem;
   }
 
   @media ${({ theme }) => theme.breakpoints.mobile} {
     grid-template-columns: 0.8rem repeat(3, 1fr) 0.8rem;
   }
+`
+export const BackgroundStyle = styled.div`
+  background: ${({ theme }) => theme.gradients.mainBackground};
 `

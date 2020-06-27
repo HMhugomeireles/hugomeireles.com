@@ -18,4 +18,6 @@ export const shadows = {
 
 export const gradients = {
   mainBackground: "linear-gradient(141.61deg, #516E8B 19.45%, #26323F 100%)",
+  mainBackgroundRevert:
+    "linear-gradient(55.75deg, #516E8B 25.56%, #26323F 100%);",
 }
