@@ -1,8 +1,5 @@
 ## Hugo Meireles
 
-### TODO
+**Under construction**
 
-[ ] change colors typographyElement
-[ ] Theme organize the spacings media query
-[ ] Create toggle theme
-[ ] Fix measures into design
+This will give the online presence and keep tracking what I have learn and sheared same tips I thinks important.

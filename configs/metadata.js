@@ -12,4 +12,9 @@ module.exports = {
   userName: "Meireles",
   userEmail: "hugomeireles@hugomeireles.com",
   userTwitter: "h3meireles",
+  socialLinks: {
+    linkedIn: "https://www.linkedin.com/in/hm-hugomeireles/",
+    github: "https://github.com/HMhugomeireles",
+    twitter: "https://twitter.com/h3meireles",
+  },
 }
