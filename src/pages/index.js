@@ -4,14 +4,7 @@ import Layout from "./layout"
 import { Home, About } from "../screens"
 
 function IndexPage(props) {
-  return (
-    <Layout>
-      <AnimatePresence exitBeforeEnter>
-        <Home />
-        <About />
-      </AnimatePresence>
-    </Layout>
-  )
+  return <div></div>
 }
 
 export default IndexPage
