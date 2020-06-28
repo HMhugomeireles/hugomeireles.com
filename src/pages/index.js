@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, section } from "../components"
+import { Container, Section } from "../components"
 
 function IndexPage(props) {
   return (
