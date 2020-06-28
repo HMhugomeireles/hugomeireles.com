@@ -15,9 +15,3 @@ export const shadows = {
   boxShadow1: "0px 4px 60px #2A3846",
   boxShadow2: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 }
-
-export const gradients = {
-  mainBackground: "linear-gradient(141.61deg, #516E8B 19.45%, #26323F 100%)",
-  mainBackgroundRevert:
-    "linear-gradient(55.75deg, #516E8B 25.56%, #26323F 100%);",
-}
