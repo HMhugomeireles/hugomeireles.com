@@ -1,6 +1,24 @@
 import { breakpoints, spacings, shadows, gradients } from "./shared"
 import { colors, blue } from "./colors"
 
+export const Light = {
+  background: colors.white,
+  color: colors.grey,
+  button: {
+    background: colors.primary,
+    color: colors.white,
+  },
+}
+
+export const Dark = {
+  background: colors.dark,
+  color: colors.greyLight,
+  button: {
+    background: colors.primary,
+    color: colors.white,
+  },
+}
+
 export default {
   colors: {
     ...colors,
@@ -9,6 +27,9 @@ export default {
         ...blue,
       },
     },
+  },
+  currentTheme: {
+    ...Light,
   },
   gradients: {
     ...gradients,
@@ -21,23 +42,5 @@ export default {
   },
   shadows: {
     ...shadows,
-  },
-}
-
-export const Light = {
-  background: colors.white,
-  color: colors.grey,
-  buttons: {
-    background: colors.primary,
-    color: colors.white,
-  },
-}
-
-export const Dark = {
-  background: colors.dark,
-  color: colors.greyLight,
-  buttons: {
-    background: colors.primary,
-    color: colors.white,
   },
 }

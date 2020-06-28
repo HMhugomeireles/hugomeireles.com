@@ -1,5 +1,6 @@
 import React from "react"
 import { Container, Section } from "../components"
+import { Button } from "../elements"
 
 function IndexPage(props) {
   return (
@@ -12,6 +13,7 @@ function IndexPage(props) {
           have a many passion. Father, Dreamer, Idealistic, Javascript lover and
           interfaces creator.
         </p>
+        <Button>Tips</Button>
       </Section>
     </Container>
   )
