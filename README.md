@@ -12,13 +12,14 @@ This will give the online presence and keep tracking what I have learn and shear
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/HMhugomeireles/hugomeireles.com">
 </p>
 
-Sections:
-[ ] - Home
-[ ] - Build entry Section
-[ ] - Build about Section
-[ ] - Build reason Section
-[ ] - Learn Curve(blog)
-[ ] - Tips
+Features:
+
+- [ ] Home
+  - [ ] Build entry Section
+  - [ ] Build about Section
+  - [ ] Build reason Section
+- [ ] Learn Curve(blog)
+- [ ] Tips
 
 <h4 align="center">Wireframe</h4>
 
