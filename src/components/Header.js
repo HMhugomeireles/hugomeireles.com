@@ -1,13 +1,11 @@
 import React from "react"
 import { Navigation, Menu, NavigationLink, HeaderWrapper } from "../elements"
 
-const Link = ({ children }) => <div>{children}</div>
-
 export function Header() {
   return (
     <HeaderWrapper>
-      <div>Logo</div>
       <Navigation>
+        <div>Logo</div>
         <Menu>
           <li>
             <NavigationLink to="/">Home</NavigationLink>
@@ -18,8 +16,8 @@ export function Header() {
           <li>
             <NavigationLink to="/tips">Tips</NavigationLink>
           </li>
+          <div>menu</div>
         </Menu>
-        <div>icon menu</div>
       </Navigation>
     </HeaderWrapper>
   )
