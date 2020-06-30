@@ -6,4 +6,8 @@ export const SectionElement = styled.section`
   padding: 50px;
 
   position: relative;
+
+  display: grid;
+  grid-template-columns: auto repeat(2, 5+00) auto;
+  gap: 40px;
 `
