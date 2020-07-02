@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 const ImageContainer = styled.div`
   grid-column: ${props => props.gridColumn};
+  grid-row: 1 / span 3;
 
   display: flex;
   justify-content: center;

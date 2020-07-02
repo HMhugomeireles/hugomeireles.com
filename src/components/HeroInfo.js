@@ -3,11 +3,11 @@ import styled from "styled-components"
 import { Button } from "../elements"
 
 const HeroInfoContainer = styled.div`
-  grid-column: 1 / 2;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 
   display: flex;
   flex-direction: column;
-  align-items: stretch;
 `
 
 export function HeroInfo() {
