@@ -4,9 +4,8 @@ import {
   Aside,
   HighLightArticle,
   ArticlesSection,
-  SpotlightArticle,
-  Categories,
 } from "../elements"
+import { SpotlightArticle, Categories } from "../components"
 import { Articles } from "../containers"
 
 function Blog() {

@@ -1,4 +1,4 @@
-import { breakpoints, spacings, shadows, gradients } from "./shared"
+import { breakpoints, spacings, shadows } from "./shared"
 import { colors, blue } from "./colors"
 
 export const Light = {
@@ -29,10 +29,7 @@ export default {
     },
   },
   currentTheme: {
-    ...Light,
-  },
-  gradients: {
-    ...gradients,
+    ...Dark,
   },
   breakpoints: {
     ...breakpoints,
