@@ -4,11 +4,14 @@ module.exports = {
   siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets`,
+        name: `categories`,
+        path: `${__dirname}/src/assets/categories`,
       },
     },
     {
@@ -39,14 +42,21 @@ module.exports = {
         path: `${__dirname}/content/me`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Hugo Meireles`,
+        short_name: `Meireles`,
         start_url: `/`,
+        icon: `src/assets/icons/HM.png`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`, // This path is relative to the root of the site.
@@ -77,6 +87,5 @@ module.exports = {
         display: "swap",
       },
     },
-    `gatsby-plugin-styled-components`,
   ],
 }
