@@ -1,11 +1,19 @@
+/**
+ * page index
+ */
 export * from "./Container"
 export * from "./Section"
+
 export * from "./HeroInfo"
 export * from "./Image"
 export * from "./About"
 export * from "./Bio"
-export * from "./SpotlightArticle"
-export * from "./Categories"
-export * from "./Icons"
-export * from "./Category"
-export * from "./BlogHeader"
+
+/**
+ * page all posts
+ */
+export * from "./Header"
+export * from "./Article"
+export * from "./Footer"
+
+export * from "./Icon"

@@ -1,5 +1,10 @@
 import React from "react"
 
 export default function NotFound() {
-  return <div>Not found page</div>
+  return (
+    <div>
+      <span>¯\_(ツ)_/¯</span>
+      Not found page
+    </div>
+  )
 }
