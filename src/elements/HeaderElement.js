@@ -1,12 +1,7 @@
 import styled from "styled-components"
 
-export const HeaderWrapper = styled.header`
-  position: fixed;
-  top: 0;
-  left: 50%;
-  max-width: 1024px;
-  width: 100%;
-  z-index: 99;
+export const HeaderContainer = styled.aside`
+  grid-column: 1 / span 12;
 
-  transform: translateX(-50%);
+  box-shadow: ${({ theme }) => theme.shadows.boxShadow2};
 `

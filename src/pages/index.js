@@ -20,7 +20,7 @@ function Box() {
 function IndexPage(props) {
   return (
     <React.Fragment>
-      <Canvas style={{ position: "fixed" }}>
+      <Canvas style={{ position: "fixed", backgroundColor: "#323538" }}>
         <ambientLight intensity={0.3} />
         <Box />
       </Canvas>

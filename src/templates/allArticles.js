@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { BlogHeader, Article } from "../components"
-import { ArticlesSection, MainContainer } from "../elements"
+import { Header, Article, FooterContainer } from "../components"
+import { ContentSection, MainContainer } from "../elements"
 
 export default function allArticles({ pageContext, data }) {
   const { currentPage, numPage } = pageContext
@@ -14,8 +14,8 @@ export default function allArticles({ pageContext, data }) {
 
   return (
     <MainContainer>
-      <BlogHeader />
-      <ArticlesSection>
+      <Header />
+      <ContentSection>
         {posts.map(post => (
           <Article
             key={post.node.id}
@@ -26,7 +26,8 @@ export default function allArticles({ pageContext, data }) {
             category={post.node.frontmatter.category}
           />
         ))}
-      </ArticlesSection>
+      </ContentSection>
+      <FooterContainer />
     </MainContainer>
   )
 }
