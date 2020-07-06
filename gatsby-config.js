@@ -17,6 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/icons`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `blog`,
         path: `${__dirname}/content/blog`,
       },
@@ -82,6 +89,7 @@ module.exports = {
         fonts: [
           `open sans`,
           `roboto mono`,
+          `IBM Plex Sans`,
           `muli\:300,400,400i,700,700i`, // you can also specify font weights and styles
         ],
         display: "swap",

@@ -1,7 +1,10 @@
-/* exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { data } = await graphql(`
     query {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      allMdx(
+        sort: { fields: frontmatter___date, order: DESC }
+        filter: { frontmatter: { template: { eq: "post" } } }
+      ) {
         edges {
           node {
             frontmatter {
@@ -14,13 +17,13 @@
     }
   `)
 
-  const postPerPage = 3
+  const postPerPage = 7
   const numPages = Math.ceil(data.allMdx.edges.length / postPerPage)
 
   Array.from({ length: numPages }).forEach((_, index) => {
     actions.createPage({
-      path: index === 0 ? "/post" : `/posts/page/${index + 1}`,
-      component: require.resolve("./src/templates/allPosts.js"),
+      path: index === 0 ? "/blog" : `/blog/page/${index + 1}`,
+      component: require.resolve("./src/templates/allArticles.js"),
       context: {
         limit: postPerPage,
         skip: index * postPerPage,
@@ -30,7 +33,7 @@
     })
   })
 
-  data.allMdx.edges.forEach(edge => {
+  /* data.allMdx.edges.forEach(edge => {
     const slug = edge.node.frontmatter.slug
     const idPost = edge.node.id
 
@@ -39,6 +42,5 @@
       component: require.resolve("./src/templates/singlePost.js"),
       context: { idPost },
     })
-  })
+  }) */
 }
- */
