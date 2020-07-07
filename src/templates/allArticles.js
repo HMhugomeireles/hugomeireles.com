@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Header, Article, FooterContainer } from "../components"
+import { Header, PostCard, FooterContainer } from "../components"
 import { ContentSection, MainContainer } from "../elements"
 
 export default function allArticles({ pageContext, data }) {
@@ -17,7 +17,7 @@ export default function allArticles({ pageContext, data }) {
       <Header />
       <ContentSection>
         {posts.map(post => (
-          <Article
+          <PostCard
             key={post.node.id}
             title={post.node.frontmatter.title}
             slug={post.node.frontmatter.slug}

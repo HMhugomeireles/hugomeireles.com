@@ -13,7 +13,7 @@ export * from "./Bio"
  * page all posts
  */
 export * from "./Header"
-export * from "./Article"
+export * from "./PostCard"
 export * from "./Footer"
 
 export * from "./Icon"

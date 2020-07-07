@@ -1,58 +1,14 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
-import { LinkWrapper, Menu } from "../elements"
+import { LinkWrapper, Menu, HeaderContainer, BlogTitle } from "../elements"
 
-const HeaderContainer = styled.section`
-  height: 8.125rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-
-const BlogTitle = styled.section`
-  background-color: #56585b;
-  color: #fff;
-  padding: 5rem;
-  font-family: "IBM Plex Sans";
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 1.6rem;
-  }
-`
+import SearchIcon from "../assets/icons/search.svg"
+import Logo from "../assets/icons/logo.svg"
 
 export function Header() {
-  const data = useStaticQuery(graphql`
-    query {
-      file(
-        childImageSharp: { fixed: { originalName: { eq: "hm-large.png" } } }
-      ) {
-        childImageSharp {
-          fixed {
-            base64
-            width
-            height
-            src
-            srcSet
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <header>
       <HeaderContainer>
-        <Img
-          fluid={data.file.childImageSharp.fixed}
-          alt="Hugo Meireles brand"
-        />
+        <Logo width="91" />
         <nav>
           <Menu>
             <li>
@@ -61,12 +17,16 @@ export function Header() {
             <li>
               <LinkWrapper to="/blog">Notes</LinkWrapper>
             </li>
+            <li>
+              <SearchIcon width="24" height="24" fill="#1976D2" />
+            </li>
           </Menu>
         </nav>
       </HeaderContainer>
       <BlogTitle>
-        <h1>Blog</h1>
-        <p>space of the things I have in the brain</p>
+        <h1>📔Blog</h1>
+        <p>My space where I write the things I have in the mind.</p>
+        <p>In one word. kindergarten🏡</p>
       </BlogTitle>
     </header>
   )
