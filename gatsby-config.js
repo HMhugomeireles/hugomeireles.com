@@ -89,7 +89,7 @@ module.exports = {
         fonts: [
           `open sans`,
           `roboto mono`,
-          `IBM Plex Sans`,
+          `IBM Plex Sans\:200,300,400,600,700`,
           `muli\:300,400,400i,700,700i`, // you can also specify font weights and styles
         ],
         display: "swap",

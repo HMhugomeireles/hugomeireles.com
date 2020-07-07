@@ -5,12 +5,10 @@ import { Link } from "gatsby"
 export const LinkWrapper = styled(props => <Link {...props} />)`
   height: 58px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.hub.blue[300]};
 
-  a {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.hub.blue[300]};
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: "IBM Plex Sans", sans-serif;
-  }
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "IBM Plex Sans", sans-serif;
 `
