@@ -12,6 +12,7 @@ export * from "./Bio"
 /**
  * page all posts
  */
+export * from "./BlogContainer"
 export * from "./Header"
 export * from "./PostCard"
 export * from "./Footer"
