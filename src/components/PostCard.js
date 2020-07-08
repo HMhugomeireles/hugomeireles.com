@@ -8,9 +8,9 @@ import {
   PostCardFooter,
 } from "../elements"
 
-export function PostCard({ title, slug, date, excerpt, category }) {
+export function PostCard({ title, slug, date, excerpt, category, thumbnail }) {
   return (
-    <PostCardContainer role="Post card of article">
+    <PostCardContainer role="Post card of article" thumbnail={thumbnail}>
       <Link to={slug}>
         <ArticleCardHeader>
           <Icon category={category} size={["45px", "45px"]} />

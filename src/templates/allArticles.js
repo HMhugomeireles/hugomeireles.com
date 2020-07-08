@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Header, PostCard, FooterContainer } from "../components"
-import { ContentSection, MainContainer } from "../elements"
+import { PostCard, BlogContainer } from "../components"
+import { ContentSection } from "../elements"
 
 export default function allArticles({ pageContext, data }) {
   const { currentPage, numPage } = pageContext
@@ -13,8 +13,7 @@ export default function allArticles({ pageContext, data }) {
   const posts = data.allMdx.edges
 
   return (
-    <MainContainer>
-      <Header />
+    <BlogContainer>
       <ContentSection>
         {posts.map(post => (
           <PostCard
@@ -24,11 +23,13 @@ export default function allArticles({ pageContext, data }) {
             date={post.node.frontmatter.date}
             excerpt={post.node.frontmatter.excerpt}
             category={post.node.frontmatter.category}
+            thumbnail={
+              "https://images.unsplash.com/photo-1582224369048-e4d2d7a6ba30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1074&q=80"
+            }
           />
         ))}
       </ContentSection>
-      <FooterContainer />
-    </MainContainer>
+    </BlogContainer>
   )
 }
 
