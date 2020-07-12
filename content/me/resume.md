@@ -7,9 +7,10 @@ template: resume
 ### Full Stack Developer
 
 ## About
-I'm a self-taught developer. A relentless technology lover, thirsty for knowledge. 
-I've started my journey 2 years ago when I decided to chase what I'm passionate about. 
-I'm a Javascript lover and an idealistic. 
+
+I'm a self-taught developer. A relentless technology lover, thirsty for knowledge.
+I've started my journey 2 years ago when I decided to chase what I'm passionate about.
+I'm a Javascript lover and an idealistic.
 An avid advocate of clean code that helps developers deliver a better product to the customer
 
 ## Links

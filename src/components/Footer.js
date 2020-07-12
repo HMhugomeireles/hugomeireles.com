@@ -26,7 +26,12 @@ const SocialLinks = styled.section`
 export function FooterContainer() {
   return (
     <Footer>
-      <p>© Hugo Meireles 2020</p>
+      <p>
+        <span role="img" aria-label="Copy write to hugo meireles">
+          ©
+        </span>{" "}
+        Hugo Meireles 2020
+      </p>
     </Footer>
   )
 }

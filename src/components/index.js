@@ -18,3 +18,4 @@ export * from "./PostCard"
 export * from "./Footer"
 
 export * from "./Icon"
+export * from "./Pagination"
