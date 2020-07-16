@@ -23,11 +23,17 @@ export default function allArticles({ pageContext, data }) {
             date={post.node.frontmatter.date}
             excerpt={post.node.frontmatter.excerpt}
             category={post.node.frontmatter.category}
-            thumbnail={
-              "https://images.unsplash.com/photo-1582224369048-e4d2d7a6ba30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1074&q=80"
-            }
+            thumbnail={post.node.frontmatter.thumbnail}
           />
         ))}
+        {Boolean(numPage > 1) && (
+          <Pagination
+            isFirst={isFirst}
+            isLast={isLast}
+            prevPage={previousPage}
+            nextPage={nextPage}
+          />
+        )}
       </ContentSection>
     </BlogContainer>
   )

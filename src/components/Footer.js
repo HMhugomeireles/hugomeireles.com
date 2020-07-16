@@ -7,7 +7,7 @@ const Footer = styled.footer`
   text-align: center;
   background: #242526;
 `
-const FooterWrapper = styled.section`
+/* const FooterWrapper = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -21,12 +21,17 @@ const ImageAuthor = styled.img`
 
 const SocialLinks = styled.section`
   width: 50%;
-`
+` */
 
 export function FooterContainer() {
   return (
     <Footer>
-      <p>© Hugo Meireles 2020</p>
+      <p>
+        <span role="img" aria-labelledby="Copy write to hugo meireles">
+          ©
+        </span>{" "}
+        Hugo Meireles 2020
+      </p>
     </Footer>
   )
 }
