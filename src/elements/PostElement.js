@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const PostCardContainer = styled.article`
   border-bottom: 3px solid tomato;
-  /* border-top: 3px solid #fff; */
   z-index: 1;
   margin: 1rem 0;
   overflow: hidden;
@@ -11,8 +10,7 @@ export const PostCardContainer = styled.article`
 
   a {
     border-left: 1rem solid tomato;
-    /* 
-    border-right: 1rem solid tomato; */
+
     text-decoration: none;
     padding: 30px;
 
@@ -34,15 +32,15 @@ export const PostCardContainer = styled.article`
       display: block;
       position: absolute;
       top: 0;
-      left: -110%;
+      left: -120%;
       transform: skew(-43deg, 0);
       z-index: -1;
       background-color: tomato;
-      transition: 0.2s ease-in;
+      transition: 0.3s ease-in;
     }
   }
   a:hover::before {
-    left: -80%;
+    left: -50%;
     filter: brightness(0.7);
   }
   a:hover,
