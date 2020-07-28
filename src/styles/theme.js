@@ -1,18 +1,31 @@
 import { breakpoints, spacings, shadows } from "./shared"
-import { colors, blue } from "./colors"
+import { colors, blue, grey } from "./colors"
 
 export const Light = {
-  background: colors.white,
-  color: colors.grey,
+  pageBackground: grey.darkGrey,
+  highlighBackground: grey.midDarkGrey,
+  textColor: grey.grey,
+  highlighColor: colors.white,
   button: {
     background: colors.primary,
     color: colors.white,
   },
 }
 
-export const Dark = {
+/* export const Dark = {
   background: colors.dark,
   color: colors.greyLight,
+  button: {
+    background: colors.primary,
+    color: colors.white,
+  },
+} */
+
+export const Dark = {
+  pageBackground: grey.darkGrey,
+  highlighBackground: grey.midDarkGrey,
+  textColor: grey.grey,
+  highlighColor: colors.white,
   button: {
     background: colors.primary,
     color: colors.white,

@@ -21,11 +21,13 @@ export const BlogTitle = styled.section`
   h1 {
     font-size: 3rem;
     margin-bottom: 0.9rem;
+    color: ${({ theme }) => theme.highlighColor};
   }
 
   p {
     font-size: 1.6rem;
     padding-left: 1rem;
     font-style: italic;
+    color: ${({ theme }) => theme.textColor};
   }
 `

@@ -16,5 +16,6 @@ export * from "./BlogContainer"
 export * from "./Header"
 export * from "./PostCard"
 export * from "./Footer"
+export * from "./Pagination"
 
 export * from "./Icon"

@@ -5,7 +5,6 @@ export const PostCardContainer = styled.article`
   z-index: 1;
   margin: 1rem 0;
   overflow: hidden;
-  filter: brightness(0.7);
   position: relative;
 
   a {
@@ -71,6 +70,7 @@ export const ArticleCardHeader = styled.header`
 
   h2 {
     font-size: 3.1rem;
+    color: ${({ theme }) => theme.highlighColor};
   }
 `
 
@@ -79,6 +79,7 @@ export const PostCardBody = styled.div`
 
   p {
     margin-left: 3rem;
+    color: ${({ theme }) => theme.textColor};
   }
 `
 
@@ -87,10 +88,11 @@ export const PostCardFooter = styled.footer`
 
   p {
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-style: italic;
     font-weight: 100;
 
     padding: 0.4rem 0.2rem 0.4rem 2.5rem;
+    color: ${({ theme }) => theme.textColor};
   }
 `

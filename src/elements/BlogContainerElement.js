@@ -6,8 +6,7 @@ export const BlogContainerElement = styled.section`
   justify-content: center;
   min-height: 100vh;
 
-  background: ${({ theme }) => theme.currentTheme.background};
-  color: ${({ theme }) => theme.currentTheme.color};
+  background: ${({ theme }) => theme.currentTheme.pageBackground};
 `
 
 export const BlogContainerWrapper = styled.main`

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { PostCard, BlogContainer } from "../components"
+import { PostCard, BlogContainer, Pagination } from "../components"
 import { ContentSection } from "../elements"
 
 export default function allArticles({ pageContext, data }) {

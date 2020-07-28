@@ -14,3 +14,9 @@ export const blue = {
   400: "#1564B3",
   500: "#114F8C",
 }
+
+export const grey = {
+  darkGrey: "#25262A",
+  midDarkGrey: "#2D2E32",
+  grey: "#90939A",
+}
